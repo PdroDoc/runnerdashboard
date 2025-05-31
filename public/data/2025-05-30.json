@@ -1,0 +1,35 @@
+{
+  "start_time": "2025-05-30T22:03:32",
+  "duration_sec": 3210,
+  "distance_km": 4.9,
+  "avg_heart_rate": 145,
+  "calories": 398,
+  "type": "running",
+  "laps": [
+    {
+      "avg_hr": 136,
+      "distance_km": 1.0,
+      "duration": 533
+    },
+    {
+      "avg_hr": 136,
+      "distance_km": 1.0,
+      "duration": 512
+    },
+    {
+      "avg_hr": 149,
+      "distance_km": 1.0,
+      "duration": 834
+    },
+    {
+      "avg_hr": 146,
+      "distance_km": 1.0,
+      "duration": 526
+    },
+    {
+      "avg_hr": 152,
+      "distance_km": 0.9,
+      "duration": 806
+    }
+  ]
+}

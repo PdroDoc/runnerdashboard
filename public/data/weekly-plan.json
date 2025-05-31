@@ -1,0 +1,51 @@
+[
+  {
+    "day": "Mon",
+    "type": "Long Run",
+    "distance": "10K",
+    "duration": "75:00",
+    "completed": false
+  },
+  {
+    "day": "Tue",
+    "type": "Rest",
+    "distance": "",
+    "duration": "",
+    "completed": false
+  },
+  {
+    "day": "Wed",
+    "type": "Easy Run",
+    "distance": "5K",
+    "duration": "75:00",
+    "completed": false
+  },
+  {
+    "day": "Thu",
+    "type": "Rest",
+    "distance": "",
+    "duration": "",
+    "completed": false
+  },
+  {
+    "day": "Fri",
+    "type": "Tempo Run",
+    "distance": "8K",
+    "duration": "60:00",
+    "completed": false
+  },
+  {
+    "day": "Sat",
+    "type": "Recovery",
+    "distance": "",
+    "duration": "",
+    "completed": false
+  },
+  {
+    "day": "Sun",
+    "type": "Recovery",
+    "distance": "",
+    "duration": "",
+    "completed": false
+  }
+]
