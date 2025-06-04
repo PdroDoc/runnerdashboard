@@ -19,32 +19,26 @@ export default function Component() {
     weeklyStats: { day: string; distance: number }[];
   } | null>(null)
 
-  // Removed: fetch("/data/2025-05-30.json") effect, now handled in analytics fetch below
+  useEffect(() => {
+    fetch("/data/latest.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setCurrentRun({
+          isActive: false,
+          duration: formatDuration(data.duration_sec),
+          distance: data.distance_km.toFixed(1),
+          pace: estimatePace(data.distance_km, data.duration_sec),
+          heartRate: data.avg_heart_rate,
+          calories: data.calories,
+        })
+      })
+  }, [])
 
   useEffect(() => {
     fetch("/Data/performance.json")
       .then((res) => res.json())
       .then((data) => {
         setAnalyticsData(data)
-        // Fill currentRun with the most recent data
-        if (data?.paceData && data.paceData.length > 0) {
-          const lastIndex = data.paceData.length - 1;
-          const lastPace = parseFloat(data.paceData[lastIndex].pace);
-          const lastHR = data.heartRateData?.[lastIndex]?.hr;
-          const lastDistance = data.weeklyStats?.[lastIndex]?.distance;
-
-          const durationMin = lastPace * lastDistance;
-          const durationSec = Math.round(durationMin * 60);
-
-          setCurrentRun({
-            isActive: false,
-            duration: formatDuration(durationSec),
-            distance: lastDistance.toFixed(1),
-            pace: lastPace.toFixed(2),
-            heartRate: lastHR,
-            calories: Math.round(durationMin * 10),
-          });
-        }
       })
   }, [])
 
