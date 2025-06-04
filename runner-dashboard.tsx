@@ -35,7 +35,7 @@ export default function Component() {
   }, [])
 
   useEffect(() => {
-    fetch("/Data/performance.json")
+    fetch("/data/performance.json")
       .then((res) => res.json())
       .then((data) => {
         setAnalyticsData(data)
